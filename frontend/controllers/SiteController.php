@@ -210,4 +210,9 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function getProfile()
+    {
+        return $this->hasOne(Profile::className(), ['user_id' => 'id']);
+    }
 }
